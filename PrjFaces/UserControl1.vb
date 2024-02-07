@@ -1,7 +1,7 @@
 ﻿Public Class UserControl1
 
     Private Sub selectedMood(ByVal intMood As Integer)
-        pbEmoticon.Image = ImageList1.Images(intMood)
+        PbEmoticon.Image = imgLoend.Images(intMood)
     End Sub
 
     Public Sub setMood(ByVal strMood As String)

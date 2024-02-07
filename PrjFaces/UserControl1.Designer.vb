@@ -24,42 +24,43 @@ Partial Class UserControl1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserControl1))
-        Me.pbEmoticon = New System.Windows.Forms.PictureBox()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        CType(Me.pbEmoticon, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.imgLoend = New System.Windows.Forms.ImageList(Me.components)
+        Me.PbEmoticon = New System.Windows.Forms.PictureBox()
+        CType(Me.PbEmoticon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'pbEmoticon
+        'imgLoend
         '
-        Me.pbEmoticon.Location = New System.Drawing.Point(256, 148)
-        Me.pbEmoticon.Name = "pbEmoticon"
-        Me.pbEmoticon.Size = New System.Drawing.Size(32, 32)
-        Me.pbEmoticon.TabIndex = 0
-        Me.pbEmoticon.TabStop = False
+        Me.imgLoend.ImageStream = CType(resources.GetObject("imgLoend.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.imgLoend.TransparentColor = System.Drawing.Color.Transparent
+        Me.imgLoend.Images.SetKeyName(0, "confused.png")
+        Me.imgLoend.Images.SetKeyName(1, "cool.png")
+        Me.imgLoend.Images.SetKeyName(2, "smile.png")
+        Me.imgLoend.Images.SetKeyName(3, "star.png")
+        Me.imgLoend.Images.SetKeyName(4, "teeth.png")
+        Me.imgLoend.Images.SetKeyName(5, "yell.png")
         '
-        'ImageList1
+        'PbEmoticon
         '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "confused.png")
-        Me.ImageList1.Images.SetKeyName(1, "cool.png")
-        Me.ImageList1.Images.SetKeyName(2, "smile.png")
-        Me.ImageList1.Images.SetKeyName(3, "star.png")
-        Me.ImageList1.Images.SetKeyName(4, "teeth.png")
-        Me.ImageList1.Images.SetKeyName(5, "yell.png")
+        Me.PbEmoticon.Image = Global.PrjFaces.My.Resources.Resources.confused
+        Me.PbEmoticon.Location = New System.Drawing.Point(52, 27)
+        Me.PbEmoticon.Name = "PbEmoticon"
+        Me.PbEmoticon.Size = New System.Drawing.Size(32, 32)
+        Me.PbEmoticon.TabIndex = 1
+        Me.PbEmoticon.TabStop = False
         '
         'UserControl1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.pbEmoticon)
+        Me.Controls.Add(Me.PbEmoticon)
         Me.Name = "UserControl1"
         Me.Size = New System.Drawing.Size(800, 450)
-        CType(Me.pbEmoticon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbEmoticon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents pbEmoticon As PictureBox
-    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents PbEmoticon As PictureBox
+    Friend WithEvents imgLoend As ImageList
 End Class
