@@ -1,33 +1,49 @@
 ﻿Imports PrjFaces
 
 Public Class Form1
-    Private Sub BtnConfused_Click(sender As Object, e As EventArgs) Handles BtnConfused.Click
-        Dim userControlInstance As New UserControl1()
-        userControlInstance.setMood("Confused")
+    Private WithEvents switchControl As New USwitch
+    Private bulbControl As New UBulb
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Add the switch and bulb controls to the form
+        Me.Controls.Add(switchControl)
+        Me.Controls.Add(bulbControl)
+
+        ' Position the controls on the form
+        switchControl.Location = New Point(50, 50)
+        bulbControl.Location = New Point(150, 50)
     End Sub
 
-    Private Sub btnCool_Click(sender As Object, e As EventArgs) Handles btnCool.Click
-        Dim userControlInstance As New UserControl1()
-        userControlInstance.setMood("Cool")
+    Private Sub switchControl_Click(sender As Object, e As EventArgs) Handles switchControl.Click
+        ' Control the bulb state based on the switch state
+        bulbControl.IsOn = switchControl.IsOn
+    End Sub
+    Private Sub BtnConfused_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnConfused.Click
+        UserControl.setMood("confused")
     End Sub
 
-    Private Sub btnSmile_Click(sender As Object, e As EventArgs) Handles btnSmile.Click
-        Dim userControlInstance As New UserControl1()
-        userControlInstance.setMood("Smile")
+    Private Sub BtnCool_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCool.Click
+        UserControl.setMood("cool")
     End Sub
 
-    Private Sub btnStar_Click(sender As Object, e As EventArgs) Handles btnStar.Click
-        Dim userControlInstance As New UserControl1()
-        userControlInstance.setMood("Star")
+    Private Sub BtnSmile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSmile.Click
+        UserControl.setMood("smile")
     End Sub
 
-    Private Sub btnTeeth_Click(sender As Object, e As EventArgs) Handles btnTeeth.Click
-        Dim userControlInstance As New UserControl1()
-        userControlInstance.setMood("Teeth")
+    Private Sub BtnStar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStar.Click
+        UserControl.setMood("star")
     End Sub
 
-    Private Sub btnYell_Click(sender As Object, e As EventArgs) Handles btnYell.Click
-        Dim userControlInstance As New UserControl1()
-        userControlInstance.setMood("Yell")
+
+    Private Sub BtnTeeth_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTeeth.Click
+        UserControl.setMood("teeth")
     End Sub
+
+    Private Sub BtnYell_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnYell.Click
+        UserControl.setMood("yell")
+    End Sub
+    Private Sub BtnPuhasta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPuhasta.Click
+        UserControl.ClearMood()
+    End Sub
+
 End Class

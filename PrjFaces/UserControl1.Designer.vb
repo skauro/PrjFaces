@@ -42,10 +42,9 @@ Partial Class UserControl1
         '
         'PbEmoticon
         '
-        Me.PbEmoticon.Image = Global.PrjFaces.My.Resources.Resources.confused
-        Me.PbEmoticon.Location = New System.Drawing.Point(52, 27)
+        Me.PbEmoticon.Location = New System.Drawing.Point(38, 20)
         Me.PbEmoticon.Name = "PbEmoticon"
-        Me.PbEmoticon.Size = New System.Drawing.Size(32, 32)
+        Me.PbEmoticon.Size = New System.Drawing.Size(53, 52)
         Me.PbEmoticon.TabIndex = 1
         Me.PbEmoticon.TabStop = False
         '

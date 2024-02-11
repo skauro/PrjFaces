@@ -22,5 +22,9 @@
                 Me.selectedMood(0)
         End Select
     End Sub
-
+    Public Sub ClearMood()
+        ' Dispose the current image and set it to Nothing
+        PbEmoticon.Image.Dispose()
+        PbEmoticon.Image = Nothing
+    End Sub
 End Class
