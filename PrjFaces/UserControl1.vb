@@ -27,4 +27,5 @@
         PbEmoticon.Image.Dispose()
         PbEmoticon.Image = Nothing
     End Sub
+
 End Class

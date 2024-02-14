@@ -42,7 +42,7 @@ Partial Class UserControl1
         '
         'PbEmoticon
         '
-        Me.PbEmoticon.Location = New System.Drawing.Point(38, 20)
+        Me.PbEmoticon.Location = New System.Drawing.Point(34, 20)
         Me.PbEmoticon.Name = "PbEmoticon"
         Me.PbEmoticon.Size = New System.Drawing.Size(53, 52)
         Me.PbEmoticon.TabIndex = 1
